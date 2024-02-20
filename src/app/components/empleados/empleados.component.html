@@ -1,0 +1,9 @@
+<span>Empleados de la empresa</span>
+<app-ejemplo></app-ejemplo>
+
+<empleado *ngFor="let empleado of empleadosAux; let i = index" [empleadoDeLista]="empleado" [indice]="i"  (caracteristicasEmpleados)="agregaCaracteristica($event)">
+</empleado>
+
+<div *ngFor="let Caracteristica of arrayCaracteristicas" style="background-color: gray;">
+hola {{ Caracteristica}}
+</div>

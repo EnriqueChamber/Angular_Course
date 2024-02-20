@@ -1,0 +1,5 @@
+<p>quienes-components works!</p>
+<button (click)="volverHome()">Volver a Home</button>
+<input type="number" #indice (change)="0"> <!-- No actualiza el atributo value hasta que se lance un evento, por ejemplo (change)="0"-->
+<input type="number" #accion (change)="0"> <!-- No actualiza el atributo value hasta que se lance un evento, por ejemplo (change)="0"-->
+<a [routerLink]="['/contacto', indice.value]" [queryParams]="{accion:accion.value}"> Actualiza</a>

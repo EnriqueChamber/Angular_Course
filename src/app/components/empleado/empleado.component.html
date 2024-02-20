@@ -1,0 +1,9 @@
+<div>
+    <span [ngClass]="{paraDirectores : empleadoDeLista.cargo.includes('resident')}">{{ indice + 1 }}. {{ empleadoDeLista.nombre }} - {{ empleadoDeLista.apellido }} </span>
+    - <span [ngStyle]="{color: (empleadoDeLista.cargo.includes('resident'))? 'green' : 'red'}"> {{ empleadoDeLista.cargo }} </span>
+    - <span [ngStyle]="{color: (empleadoDeLista.salario.valueOf() > 5500)? 'green' : 'red'}">{{ empleadoDeLista.salario }} </span>
+
+    <label for="nuevaCaracteristica{{ indice + 1 }}">Característica: </label>
+    <input type="text" id="nuevaCaracteristica{{ indice + 1 }}" #nuevaCaracteristica>
+    <button name="agregaCaracteristica" (click)="agregaCaracteristicas(nuevaCaracteristica.value)" class="btn btn-primary">Añadir Caracteristica</button>
+</div>
